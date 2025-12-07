@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIP Calculator - Plan Your Investment</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 SIP Calculator</h1>
+            <p>Calculate your Systematic Investment Plan returns</p>
+        </header>
+
+        <div class="calculator-card">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="monthlyInvestment">
+                        <span class="label-text">Monthly Investment</span>
+                        <span class="label-value">₹<span id="investmentDisplay">5000</span></span>
+                    </label>
+                    <input type="range" id="monthlyInvestment" min="500" max="100000" value="5000" step="500">
+                    <div class="range-labels">
+                        <span>₹500</span>
+                        <span>₹1,00,000</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="returnRate">
+                        <span class="label-text">Expected Return Rate (p.a.)</span>
+                        <span class="label-value"><span id="rateDisplay">12</span>%</span>
+                    </label>
+                    <input type="range" id="returnRate" min="1" max="30" value="12" step="0.5">
+                    <div class="range-labels">
+                        <span>1%</span>
+                        <span>30%</span>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="timePeriod">
+                        <span class="label-text">Time Period</span>
+                        <span class="label-value"><span id="periodDisplay">10</span> Years</span>
+                    </label>
+                    <input type="range" id="timePeriod" min="1" max="40" value="10" step="1">
+                    <div class="range-labels">
+                        <span>1 Year</span>
+                        <span>40 Years</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="results-section">
+                <h2>Investment Summary</h2>
+                
+                <div class="result-card">
+                    <div class="result-item">
+                        <span class="result-label">Total Investment</span>
+                        <span class="result-value invested">₹<span id="totalInvested">0</span></span>
+                    </div>
+                    
+                    <div class="result-item">
+                        <span class="result-label">Estimated Returns</span>
+                        <span class="result-value returns">₹<span id="estimatedReturns">0</span></span>
+                    </div>
+                    
+                    <div class="result-item highlight">
+                        <span class="result-label">Total Value</span>
+                        <span class="result-value total">₹<span id="totalValue">0</span></span>
+                    </div>
+                </div>
+
+                <div class="chart-container">
+                    <canvas id="sipChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>Made with ❤️ by Shubham Jadhav | <a href="https://github.com/shubhamjadhav0715/SIP-CALCULATOR" target="_blank">View on GitHub</a></p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
